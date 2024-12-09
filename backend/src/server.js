@@ -1,9 +1,10 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const connectDB = require("./config/db");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import connectDB from "./config/db.js";
+import "dotenv/config.js";
+import userRouter from "./routes/userRoute.js";
+import productRouter from "./routes/productRoute.js";
 
-dotenv.config();
 const app = express();
 
 connectDB();
@@ -14,6 +15,10 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Serveur en fonctionnement");
 });
+
+// Api routes
+app.use("/api/user", userRouter);
+app.use("/api/product", productRouter);
 
 const PORT = process.env.PORT || 5000;
 
