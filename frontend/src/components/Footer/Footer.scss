@@ -1,0 +1,161 @@
+.footer {
+  background-color: #333;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+    color: whitesmoke;
+  }
+
+  &-container {
+    padding: 1rem;
+  }
+
+  &-section {
+    padding: 1rem;
+    border-bottom: 1px solid whitesmoke;
+
+    .rubrique {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+  }
+
+  &-rubrique-title {
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 1.25rem;
+  }
+
+  &-sous-rubrique {
+    display: block;
+    opacity: 1;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 0.8s ease-in-out;
+    font-size: 1rem;
+
+    &-hidden {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &-plus {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: whitesmoke;
+  }
+
+  &-items,
+  .footer-links-utils,
+  .social-icon {
+    font-size: 1.3rem;
+    color: whitesmoke;
+  }
+
+  &-items {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  &-bottom {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: whitesmoke;
+  }
+}
+
+.footer-links-utils {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.social-media {
+  display: flex;
+
+  .social-icon {
+    margin-right: 1rem;
+    color: whitesmoke;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    font-size: 1rem;
+
+    .footer-section {
+      font-size: 1rem;
+    }
+
+    .footer-rubrique-title {
+      font-size: 1.25rem;
+    }
+
+    .footer-plus {
+      font-size: 1.5rem;
+    }
+
+    .footer-items,
+    .footer-links-utils,
+    .social-icon {
+      font-size: 1rem;
+    }
+  }
+
+  .social-icon {
+    font-size: 1.75rem;
+  }
+
+  .footer-bottom {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    font-size: 1.125rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .footer-section {
+      font-size: 1.3rem;
+    }
+
+    .footer-rubrique-title {
+      font-size: 1.5rem;
+    }
+
+    .footer-plus {
+      font-size: 1.75rem;
+    }
+
+    .footer-items,
+    .footer-links-utils,
+    .social-icon {
+      font-size: 1.3rem;
+    }
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+
+  .footer-bottom {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+}
